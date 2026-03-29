@@ -329,69 +329,32 @@
     .contact-note {
       font-size: 13px;
       color: var(--gray-text);
-      margin-bottom: 28px;
+      margin-bottom: 40px;
       line-height: 1.8;
     }
-    .contact-form {
-      background: var(--white);
-      border-radius: 8px;
-      border: 1px solid var(--gray-light);
-      padding: 32px 28px;
-    }
-    .form-row {
-      margin-bottom: 20px;
-    }
-    .form-row label {
-      display: block;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-    .form-row label .required {
-      color: #c0392b;
-      font-size: 11px;
-      margin-left: 4px;
-      font-weight: 400;
-    }
-    .form-row input,
-    .form-row textarea,
-    .form-row select {
-      width: 100%;
-      border: 1px solid #ccd3db;
-      border-radius: 4px;
-      padding: 10px 12px;
-      font-size: 14px;
-      font-family: inherit;
-      color: #333;
-      background: #fafbfc;
-      transition: border-color 0.2s;
-    }
-    .form-row input:focus,
-    .form-row textarea:focus,
-    .form-row select:focus {
-      outline: none;
-      border-color: var(--accent);
-      background: #fff;
-    }
-    .form-row textarea { resize: vertical; min-height: 100px; }
-    .form-submit {
+    .contact-mailto-box {
       text-align: center;
-      margin-top: 28px;
+      padding: 8px 0 32px;
     }
-    .btn-submit {
+    .btn-mailto {
+      display: inline-block;
       background: var(--navy);
       color: var(--white);
-      border: none;
-      padding: 14px 48px;
+      padding: 16px 52px;
       border-radius: 4px;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 700;
-      cursor: pointer;
       letter-spacing: 0.04em;
-      transition: background 0.2s;
+      transition: opacity 0.2s;
+      text-decoration: none;
     }
-    .btn-submit:hover { background: var(--navy-mid); }
+    .btn-mailto:hover { opacity: 0.85; }
+    .contact-email-display {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--gray-text);
+      letter-spacing: 0.02em;
+    }
     .contact-email {
       text-align: center;
       margin-top: 20px;
@@ -758,11 +721,18 @@
     <div class="divider"></div>
     <p class="contact-note">
       まずはお気軽にご相談ください。案件の詳細が固まっていない段階でも構いません。<br>
-      以下のフォームまたはメールにてご連絡ください。
+      メールにてご連絡いただければ、内容を確認のうえご返信いたします。
     </p>
 
-    <div class="contact-form">
-      <form action="mailto:contact@musubi-japan.com" method="post" enctype="text/plain">
+    <div class="contact-mailto-box">
+      <!-- TODO: メールアドレスを正式決定後に更新してください -->
+      <a href="mailto:info@musubi-japan-imports.com?subject=【お問い合わせ】Musubi Japan Imports" class="btn-mailto">
+        メールで問い合わせる
+      </a>
+      <p class="contact-email-display">info@musubi-japan-imports.com</p>
+    </div>
+
+    <!-- 削除済みのフォーム（旧コード参考用）
         <div class="form-row">
           <label>お名前 <span class="required">必須</span></label>
           <input type="text" name="name" placeholder="例：Taro Yamada / John Smith" required>
@@ -777,32 +747,10 @@
         </div>
         <div class="form-row">
           <label>商品・サービスの概要</label>
-          <textarea name="overview" placeholder="どんな商品・サービスか、簡単にご説明ください。"></textarea>
+          <textarea name="overview"></textarea>
         </div>
-        <div class="form-row">
-          <label>求めている支援の内容</label>
-          <select name="support_type">
-            <option value="">選択してください（任意）</option>
-            <option value="message">日本向け販売メッセージの整理</option>
-            <option value="localize">日本語化・訴求調整</option>
-            <option value="outreach">初期営業・顧客接点づくり</option>
-            <option value="research">日本市場向けヒアリング</option>
-            <option value="other">その他・まだ決まっていない</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label>販売したい地域・想定顧客</label>
-          <input type="text" name="target" placeholder="例：日本全国 / 東京 / 飲食店向け / ECサイト 等">
-        </div>
-        <div class="form-submit">
-          <button type="submit" class="btn-submit">送信する</button>
-        </div>
-      </form>
-    </div>
+    -->
 
-    <p class="contact-email">
-      メールでの直接連絡：<a href="mailto:contact@musubi-japan.com">contact@musubi-japan.com</a>
-    </p>
     <p class="reply-note">通常3営業日以内にご返信します。</p>
   </div>
 </section>
@@ -814,7 +762,7 @@
     <p>海外商品の日本向け販売支援</p>
     <ul class="footer-links">
       <li><a href="privacy.html">プライバシーポリシー</a></li>
-      <li><a href="mailto:contact@musubi-japan.com">お問い合わせ</a></li>
+      <li><a href="mailto:info@musubi-japan-imports.com?subject=【お問い合わせ】Musubi Japan Imports">お問い合わせ</a></li>
     </ul>
     <p class="footer-copy">&copy; 2025 Musubi Japan Imports. All rights reserved.</p>
   </div>
