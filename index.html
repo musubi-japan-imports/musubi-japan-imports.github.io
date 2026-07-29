@@ -189,6 +189,47 @@
       font-size: 11px;
     }
 
+    /* ===== PR points (cards) ===== */
+    .pr-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    @media (max-width: 640px) { .pr-grid { grid-template-columns: 1fr; } }
+    .pr-card {
+      background: var(--white);
+      border: 1px solid var(--gray-light);
+      border-radius: 10px;
+      padding: 28px 22px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(30,58,95,0.04);
+    }
+    .pr-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: #e6f0f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pr-icon svg { width: 28px; height: 28px; stroke: var(--accent); }
+    .pr-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .pr-card p {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.85;
+      text-align: left;
+    }
+    @media (max-width: 640px) { .pr-card p { text-align: center; } }
+
     /* ===== Flow (steps) ===== */
     .flow-list {
       list-style: none;
@@ -671,15 +712,40 @@
     <div class="divider"></div>
     <p class="lead">
       Musubi Japan Imports は、お客様が海外サイトで見つけた商品のURLをお送りいただき、
-      その商品の購入・輸入・配送をサポートする<strong>「リンク持ち込み型」の購入代行サービス</strong>です。
+      その商品の購入・輸入をサポートする<strong>「リンク持ち込み型」の購入代行サービス</strong>です。
     </p>
-    <ul class="point-list">
-      <li>海外サイトでの購入手続きを、当社がお客様に代わって行います</li>
-      <li>お客様が海外サイトでアカウントを作成する必要はありません</li>
-      <li>やり取りはすべて日本語。海外とのメーカー連絡も当社が対応します</li>
-      <li>輸入で気をつけたい点があれば、可能な範囲でお伝えします</li>
-      <li>安心してご利用いただけるよう、対応サイトを絞って運用しています</li>
-    </ul>
+    <div class="pr-grid">
+      <div class="pr-card">
+        <div class="pr-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/>
+            <path d="M2 3h2.2l1.9 11.2a1.5 1.5 0 0 0 1.5 1.3h8.7a1.5 1.5 0 0 0 1.5-1.2L21 7H5.4"/>
+          </svg>
+        </div>
+        <h3>購入はまるごとおまかせ</h3>
+        <p>海外サイトでの購入手続きを、当社がお客様に代わって行います。</p>
+      </div>
+      <div class="pr-card">
+        <div class="pr-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="10" width="16" height="10" rx="2"/>
+            <path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14v2.5"/>
+          </svg>
+        </div>
+        <h3>面倒な登録は不要</h3>
+        <p>お客様が海外サイトでアカウントを作成する必要はありません。</p>
+      </div>
+      <div class="pr-card">
+        <div class="pr-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 11.5a7.5 7.5 0 0 1-10.8 6.7L4 20l1.8-5.2A7.5 7.5 0 1 1 20 11.5Z"/>
+            <path d="M8.5 11.5h7M12 8v7"/>
+          </svg>
+        </div>
+        <h3>すべて日本語でOK</h3>
+        <p>やり取りはすべて日本語。海外とのメーカー連絡も当社が対応します。</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -717,7 +783,7 @@
     <h2>対応サイト例</h2>
     <div class="divider"></div>
     <p class="lead">
-      安心してご利用いただけるよう、主要な海外サイトを中心に対応しています。以下は対応サイトの<strong>一例</strong>です。
+      下記は対応サイトの<strong>一部</strong>です。その他のサイトについても、多数対応しておりますので、お気軽にお問い合わせください。
     </p>
 
     <div class="site-group">
@@ -749,7 +815,6 @@
     </div>
 
     <p class="fee-note">
-      ※ 上記は一例です。その他のサイトについても、商品URLをもとに個別に対応可否を判断します。<br>
       ※ 中古品・個人出品を含むサイトや、一部のサイトはお取り扱いできない場合があります。
     </p>
   </div>
@@ -871,10 +936,6 @@
       <div class="about-item">
         <dt>拠点</dt>
         <dd>日本</dd>
-      </div>
-      <div class="about-item">
-        <dt>対応言語</dt>
-        <dd>日本語・英語</dd>
       </div>
       <div class="about-item">
         <dt>事業形態</dt>
